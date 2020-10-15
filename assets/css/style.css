@@ -47,12 +47,31 @@ h2
     font-size: 40px;
     color: lightblue;
 }
-p
+
+h3
+{
+    font-size: 30px;
+    color: lightblue;
+}
+.liste-bouton
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-table
 {
     text-align: center;
     font-size: 30px;
     color: lightblue;
     text-shadow: 5px 5px 5px black;
+    border: 5px solid rgb(24, 54, 226);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    margin: auto;
 }
 fieldset
 {
@@ -69,16 +88,8 @@ label
 {
     color: white;
 }
-td,
-th {
-    border: 1px solid rgb(190, 190, 190);
-    padding: 10px;
-}
-
-table {
-    border-collapse: collapse;
-    border: 2px solid rgb(200, 200, 200);
-    letter-spacing: 1px;
-    font-family: sans-serif;
-    font-size: .8rem;
+p
+{
+    color: white;
+    font-size: 25px;
 }
