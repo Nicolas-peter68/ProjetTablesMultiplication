@@ -1,95 +1,170 @@
-body
-{
-    background-image: url(../img/math.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-nav
-{
-    background-color: rgb(24, 54, 226);
-    border-style: groove;
+/* Variable Color text, shadow, border top by Zack */
+*::before, *, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-ul
-{
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-    font-size: 50px;
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-li
-{    
-    font-family: fantasy;
-}
-a:link
-{
-    color: black;
-    text-decoration: none;
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
-a:visited
-{
-    color: black;
+body {
+  background-image: url(../img/math.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-h1
-{
-    text-align: center;
-    font-size: 60px;
-    color: lightblue;
+nav {
+  background-color: black;
+  border-style: groove;
 }
 
-h2
-{
-    text-align: center;
-    font-size: 40px;
-    color: lightblue;
+ul {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 40px;
+  width: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-h3
-{
-    font-size: 30px;
-    color: lightblue;
-}
-.liste-bouton
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+li {
+  font-family: fantasy;
 }
 
-.container-table
-{
-    text-align: center;
-    font-size: 30px;
-    color: lightblue;
-    text-shadow: 5px 5px 5px black;
-    border: 5px solid rgb(24, 54, 226);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: max-content;
-    margin: auto;
-}
-fieldset
-{
-    width: max-content;
+a:hover {
+  color: #40dee9;
+  text-shadow: 0 0 10px #1fb8e7, 0 0 20px #1fb8e7, 0 0 40px #1fb8e7;
 }
 
-legend
-{
-    font-size: 45px;
-    color: white;
+h1 {
+  text-align: center;
+  font-size: 60px;
+  color: lightblue;
 }
 
-label
-{
-    color: white;
+h2 {
+  text-align: center;
+  font-size: 40px;
+  color: lightblue;
 }
-p
-{
-    color: white;
-    font-size: 25px;
+
+h3 {
+  font-size: 30px;
+  color: lightblue;
 }
+
+.liste-bouton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container-table {
+  text-align: center;
+  font-size: 30px;
+  color: lightblue;
+  text-shadow: 5px 5px 5px black;
+  border: 5px solid #1836e2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+}
+
+fieldset {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+legend {
+  font-size: 45px;
+  color: white;
+}
+
+label {
+  color: white;
+}
+
+p {
+  color: #0fdceb;
+  font-size: 25px;
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.tableau {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.reponse {
+  color: #0fdceb;
+}
+
+input {
+  background-color: #0fdceb;
+  border-radius: 30px;
+  border: thick double;
+  -webkit-box-decoration-break: none;
+          box-decoration-break: none;
+  padding-left: 10px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+.questions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.check {
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

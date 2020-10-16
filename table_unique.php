@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>Génération d'une seule table</title>
 </head>
 
 <body>
@@ -29,9 +29,11 @@
                 <option value="11">11</option>
                 <option value="12">12</option>
             </select>
-            <button type="submit">Afficher</button><br>
+            <button class="btn btn-primary" type="submit">Afficher</button><br>
                </form>
     </div>
+    <div class="tableau">
+
     <table class="table">
                 <thead class="table table-borderless table-dark">
                     <tr>
@@ -52,9 +54,9 @@
                         </tr>  
                      <?php endfor;endif; ?>           
                 </tbody>
-            </table>              
-    <div class="gif1" style="width:100%;height:0;padding-bottom:111%;position:relative;margin:auto "><iframe src="https://giphy.com/embed/APqEbxBsVlkWSuFpth" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
-    <p><a href="https://giphy.com/gifs/math-thinking-APqEbxBsVlkWSuFpth">via GIPHY</a></p>
+            </table> 
+        </div>             
+
 </body>
 
 </html>

@@ -12,7 +12,8 @@
 <?php require_once("header.html")?>
     <h1>Révision des tables de multiplications</h1>
     <h2>Table de multiplication aléatoire</h2>
-    <p class="mx-auto">Bienvenue sur mon site, ici tu pourra revoir tes tables de multiplications pour les grands et les petits</p>
+    <p>Bienvenue sur mon site, ici tu pourra revoir tes tables de multiplications peu importe ton age. Comment le site fonctionne ? C'est très simple, sur la page d'accueil une table de multiplication sera générée aléatoirement sur une autre page tu pourra choisir une seule table de multiplication puis une troisième page page où tu pourra afficher plusieurs tables de multiplication à la fois. Pour terminer la dernière page te permettra de tester tes connaissances, tu aura 5 multiplication générées aléatoirement. Amuse toi bien ! (ou pas) 😊 </p>
+    <div class="tableau">
    <table class="table">
                 <thead class="table table-borderless table-dark">
                     <tr>
@@ -33,6 +34,6 @@
                         <?php endfor; ?>
                 </tbody>
             </table>
-
+</div>
 </body>
 </html>

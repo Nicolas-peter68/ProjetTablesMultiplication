@@ -7,59 +7,69 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <title>Document</title>
+    <title>Génération de plusieurs tables</title>
 </head>
 
 <body>
     <?php require_once("header.html") ?>
     <h1>Choisissez plusieurs tables de multiplication</h1>
-    <form method="get" name="table">
-        <fieldset>
-            <legend>Tables</legend>
-            <input type="checkbox" name="table[]" id="" value="1">
-            <label for="1">1</label>
-            <input type="checkbox" name="table[]" id="" value="2">
-            <label for="2">2</label>
-            <input type="checkbox" name="table[]" id="" value="3">
-            <label for="3">3</label>
-            <input type="checkbox" name="table[]" id="" value="4">
-            <label for="4">4</label>
-            <input type="checkbox" name="table[]" id="" value="5">
-            <label for="5">5</label>
-            <input type="checkbox" name="table[]" id="" value="6">
-            <label for="6">6</label>
-            <input type="checkbox" name="table[]" id="" value="7">
-            <label for="7">7</label>
-            <input type="checkbox" name="table[]" id="" value="8">
-            <label for="8">8</label>
-            <input type="checkbox" name="table[]" id="" value="9">
-            <label for="9">9</label>
-            <input type="checkbox" name="table[]" id="" value="10">
-            <label for="10">10</label>
-            <input type="checkbox" name="table[]" id="" value="11">
-            <label for="11">11</label>
-            <input type="checkbox" name="table[]" id="" value="12">
-            <label for="12">12</label>
-            <button type="submit">Afficher</button>
-        </fieldset>
-        <div class="container-table"> <?php
-                                        function table($num)
-                                        {
-                                            $num = $_GET['table'];
-                                            foreach ($num as $multiple) {
-                                                echo "Table de $multiple<br>";
-                                                for ($i = 1; $i <= 12; $i++) {
-                                                    echo $i . '*' . $multiple . ' = ' . $i * $multiple . '</br>';
-                                                }
-                                            }
-                                        }
-                                        if (!empty($_GET)) {
-                                            table($_GET['table']);
-                                        }
-                                        ?></div>
+    <form class="check" method="get" name="table">
+        <input type="checkbox" name="table[]" id="" value="1">
+        <label for="1">1</label>
+        <input type="checkbox" name="table[]" id="" value="2">
+        <label for="2">2</label>
+        <input type="checkbox" name="table[]" id="" value="3">
+        <label for="3">3</label>
+        <input type="checkbox" name="table[]" id="" value="4">
+        <label for="4">4</label>
+        <input type="checkbox" name="table[]" id="" value="5">
+        <label for="5">5</label>
+        <input type="checkbox" name="table[]" id="" value="6">
+        <label for="6">6</label>
+        <input type="checkbox" name="table[]" id="" value="7">
+        <label for="7">7</label>
+        <input type="checkbox" name="table[]" id="" value="8">
+        <label for="8">8</label>
+        <input type="checkbox" name="table[]" id="" value="9">
+        <label for="9">9</label>
+        <input type="checkbox" name="table[]" id="" value="10">
+        <label for="10">10</label>
+        <input type="checkbox" name="table[]" id="" value="11">
+        <label for="11">11</label>
+        <input type="checkbox" name="table[]" id="" value="12">
+        <label for="12">12</label>
+        <button class="btn btn-primary" type="submit">Afficher</button>>
     </form>
-    <div style="width:100%;height:0;padding-bottom:111%;position:relative;"><iframe src="https://giphy.com/embed/APqEbxBsVlkWSuFpth" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
-    <p><a href="https://giphy.com/gifs/math-thinking-APqEbxBsVlkWSuFpth">via GIPHY</a></p>
+<div class="tableau">
+    <table class="table">
+        <thead class="table table-borderless table-dark">
+            <tr>
+                <th scope="col" class="text-center">Opération</th>
+                <th scope="col" class="text-center">Résultat</th>
+            </tr>
+        </thead>
+        <tbody class ="table table-bordered table-dark">
+            <?php
+            function table($num)
+            {
+                $num = $_GET['table'];             
+                foreach ($num as $multiple) {
+                    for ($i = 1; $i <= 12; $i++) {
+                        $resultat = $multiple*$i;
+                    echo "<tr><td class='text-center'>". $multiple . '*' . $i ."</td>";
+                    echo "<td class='text-center'>".$resultat ."</td></tr>";
+                    }
+                }
+            }
+            ?>
+            <?php if (!empty($_GET)) :
+                table($_GET['table']);
+            ?>
+            <?php endif; ?>
+        </tbody>
+    </table>
+</div>
+
 </body>
 
 </html>
