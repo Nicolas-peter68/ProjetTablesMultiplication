@@ -11,12 +11,11 @@
 
 <body>
     <?php require_once("header.html") ?>
-    <h1>Choisissez une table de multiplication</h1>
-
+    <h1 class="mb-4">Choisissez une table de multiplication</h1>
     <div class="liste-bouton">
         <form method="get" name="table">
             <select name="table" id="table">
-                <option value="1" selected>1</option>
+                <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
@@ -30,32 +29,33 @@
                 <option value="12">12</option>
             </select>
             <button class="btn btn-primary" type="submit">Afficher</button><br>
-               </form>
+        </form>
     </div>
     <div class="tableau">
 
-    <table class="table">
-                <thead class="table table-borderless table-dark">
-                    <tr>
-                        <th scope="col" class="text-center">Opération</th>
-                        <th scope="col" class="text-center">Résultat</th>
-                    </tr>
-                </thead>
-                <tbody class ="table table-bordered table-dark">
-                    <?php
-                                    if (!empty($_GET)) :
-                                        $num = $_GET['table'];
-                                        for ($i = 1; $i <= 12; $i++) :
-                                            $resultat = $i*$num; 
-                                    ?>
+        <table class="table">
+            <thead class="table table-borderless table-dark">
+                <tr>
+                    <th scope="col" class="text-center">Opération</th>
+                    <th scope="col" class="text-center">Résultat</th>
+                </tr>
+            </thead>
+            <tbody class="table table-bordered table-dark">
+                <?php
+                if (!empty($_GET)) :
+                    $num = $_GET['table'];
+                    for ($i = 1; $i <= 12; $i++) :
+                        $resultat = $i * $num;
+                ?>
                         <tr>
                             <td class='text-center'><?= $num ?> * <?= $i ?></td>
                             <td class='text-center'><?= $resultat ?></td>
-                        </tr>  
-                     <?php endfor;endif; ?>           
-                </tbody>
-            </table> 
-        </div>             
+                        </tr>
+                <?php endfor;
+                endif; ?>
+            </tbody>
+        </table>
+    </div>
 
 </body>
 

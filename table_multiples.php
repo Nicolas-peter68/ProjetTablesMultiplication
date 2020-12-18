@@ -12,7 +12,7 @@
 
 <body>
     <?php require_once("header.html") ?>
-    <h1>Choisissez plusieurs tables de multiplication</h1>
+    <h1 class="mb-4">Choisissez plusieurs tables de multiplication</h1>
     <form class="check" method="get" name="table">
         <input type="checkbox" name="table[]" id="" value="1">
         <label for="1">1</label>
@@ -40,36 +40,36 @@
         <label for="12">12</label>
         <button class="btn btn-primary" type="submit">Afficher</button>>
     </form>
-<div class="tableau">
-    <table class="table">
+    <div class="tableau">
+        <?php
+        function table($num)
+        {
+            $num = $_GET['table'];
+            foreach ($num as $multiple) {
+                echo
+                    '<table class="table">
         <thead class="table table-borderless table-dark">
             <tr>
                 <th scope="col" class="text-center">Opération</th>
                 <th scope="col" class="text-center">Résultat</th>
             </tr>
         </thead>
-        <tbody class ="table table-bordered table-dark">
-            <?php
-            function table($num)
-            {
-                $num = $_GET['table'];             
-                foreach ($num as $multiple) {
-                    for ($i = 1; $i <= 12; $i++) {
-                        $resultat = $multiple*$i;
-                    echo "<tr><td class='text-center'>". $multiple . '*' . $i ."</td>";
-                    echo "<td class='text-center'>".$resultat ."</td></tr>";
-                    }
+        <tbody class ="table table-bordered table-dark">';
+                for ($i = 1; $i <= 12; $i++) {
+                    $resultat = $multiple * $i;
+                    echo "<tr><td class='text-center'>" . $multiple . '*' . $i . "</td>";
+                    echo "<td class='text-center'>" . $resultat . "</td></tr>";
                 }
             }
-            ?>
-            <?php if (!empty($_GET)) :
-                table($_GET['table']);
-            ?>
-            <?php endif; ?>
+        }
+        ?>
+        <?php if (!empty($_GET)) :
+            table($_GET['table']);
+        ?>
+        <?php endif; ?>
         </tbody>
-    </table>
-</div>
+        </table>
+    </div>
 
 </body>
-
 </html>

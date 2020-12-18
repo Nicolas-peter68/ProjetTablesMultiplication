@@ -8,10 +8,9 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Test de connaissances</title>
 </head>
-
 <body>
     <?php require_once("header.html"); ?>
-    <h1>Nous allons maintenant tester vos connaissances</h1>
+    <h1 class="mb-4">Nous allons maintenant tester vos connaissances</h1>
     <form class="questions" action="" method="get">
         <?php
         $juste = 0;
@@ -30,10 +29,10 @@
         } endfor;?>
         <button class="btn btn-primary" type="submit">Valider</button> 
         <?php if($juste===5) {
-            echo '<div style="height:0;position:relative;"><iframe src="https://giphy.com/embed/XreQmk7ETCak0"  frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>';
+            echo '<div class="mt-4" style="height:0;position:relative;"><iframe src="https://giphy.com/embed/XreQmk7ETCak0"  frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>';
         }
         else {
-            echo '<div style="height:0;position:relative;"><iframe src="https://giphy.com/embed/WrNfErHio7ZAc"   frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>';
+            echo '<div class="mt-4" style="height:0;position:relative;"><iframe src="https://giphy.com/embed/WrNfErHio7ZAc"   frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>';
         } ?>
     </form>
     <?php
@@ -41,15 +40,14 @@
     {
         global $juste;
         if ($resultat == $reponse) {
-            echo '<span class="reponse">Bonne réponse !</span>';
+            echo '<span class="reponse mb-4">Bonne réponse !</span>';
             $juste ++;
 
         } else {
-            echo '<span class="reponse">Mauvaise réponse ,revoie tes tables</span>';
+            echo '<span class="reponse mb-4">Mauvaise réponse ,revoie tes tables</span>';
         }
     }
     ?>
-
+<script type="text/javascript" src="test.js"></script>
 </body>
-
 </html>
